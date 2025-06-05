@@ -1,1 +1,58 @@
-a
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Звіт з курсу</title>
+</head>
+<body>
+
+  <div class="header">
+    <h1>ЗВІТ</h1>
+    <div class="sub">з курсу The Complete Full-Stack Web Development Bootcamp</div>
+    <div><b>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. ОСНОВИ FRONTEND та BACKEND РОЗРОБОК»</b></div>
+  </div>
+
+  <div class="student-info">
+    Студент гр. ІА-22 Сидорін Данііл Олексійович
+  </div>
+
+  <div class="photo">
+    <img src="img/face.jpg" style="width:100px;height:120px;">
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <button onclick="showContent(1)">НАЗВА КУРСУ<br>Посилання на курс</button>
+      <button onclick="showContent(2)">Посилання на<br>репозиторій</button>
+      <button onclick="showContent(3)">СЕРТИФІКАТ з<br>БАЛАМИ</button>
+      <button onclick="showContent(4)">ЗМІСТ курсу<br>Назви розділів</button>
+      <button onclick="showContent(5)">ТЕСТИ по темам</button>
+      <button onclick="showContent(6)">Практика</button>
+      <button onclick="showContent(7)">ВИСНОВКИ</button>
+    </div>
+
+    <div class="content">
+      <div id="output">
+        Місце виведення інформації
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showContent(num) {
+      const content = {
+        1: '<b>Назва курсу:</b> The Complete Full-Stack Web Development Bootcamp<br><b>Посилання:</b> <a href="#">https://ua.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12638830#overview</a>',
+        2: '<b>Посилання на репозиторій:</b> <a href="#">https://github.com/Lepseich/front_courses</a>',
+        3: '<b>Сертифікат з балами: <br> <img src="img/cert.jpg" > <a href="https://ua.udemy.com/certificate/UC-fb943b4c-e9a3-4e6b-b66c-584c6867c4bc/">Посилання</a> </b>',
+        4: '<b>Зміст курсу:</b><br>1. HTML/CSS<br>2. JavaScript<br>3. Backend (Node.js)<br>4. API інтеграції<br>5. React.js',
+        5: '<b>Тестування:</b><br>Успішно здано 5 тестів з 5-ти <br> <img src="img/quiz1.jpg" alt=""> <br> <img src="img/quiz2.jpg" alt=""> <br> <img src="img/quiz3.jpg" alt=""> <br> <img src="img/quiz4.jpg" alt=""> <br> <img src="img/quiz5.jpg" alt="">' ,
+        6: '<b>Практичні завдання: </b><br> <img src="img/code1.jpg"> <br> <img src="img/code2.jpg"> <br> <img src="img/code3.jpg"> <br> <img src="img/code4.jpg"> <br> <img src="img/code5.jpg"> <br> <img src="img/code6.jpg"> <br> <img src="img/code7.jpg"> ',
+        7: '<b>Висновки:</b><br>Курс дозволив набути практичні навички веб-розробки.'
+      };
+      document.getElementById('output').innerHTML = content[num] || 'Немає даних.';
+    }
+  </script>
+
+</body>
+</html>
